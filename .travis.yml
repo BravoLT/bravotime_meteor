@@ -1,0 +1,13 @@
+sudo: required
+language: node_js
+node_js:
+- 5.7.1
+before_install:
+- curl https://install.meteor.com/ | sh
+- npm install -g velocity-cli
+services: mongodb
+script:
+- velocity test-app --ci --once
+notifications:
+  slack:
+    secure: SJEv07ixSUiz/g77bgAtzeAakAmnoFoQxb6Srfvf3WsN8ZECe/G2/zryCA//mw8aSbLPl8rplf04cU11Uk2Dls9JuzATuXDoDePO5oJ0WFzMGyXd6fcLSQMN3v/vAMCDoDt0N8HKcq0f0SPb1daNl17b2aPn7vFuV1r7bI2AAivELAZFPtvaOGYseZA7Ycu0usUOqRGQTI8LjIc3sj5CpKIFt9jNMNcITUUdRd3FqW7Va44Mv/nCX1/lzrrrV898iGs8o7ldkWEVgFfxU0KC/wlL9ZUBoKqcg/qlBkfELZy51Fr2KRNeaJYXqUfVgiZVPdZkpy14khGI//oq5/vIa58yTlfiYj6364RZdMSy10SQ07VFOPaIfilCk3Ykfvfj2Wsa+axzW1FlmwRCLNTPNh0bGNMoEkCTyfVXG+6xUxglsYwYDKH0q0nVwKkclmOR2uF/f1rmTSJTvdDj1eQQWUJWHQzMumoueeSBPHiG6U6QLUz9lVfVJk4jU+SZ0NJQ9siZQ3GUsOu/pyRpKJmKHyhMg0exI7TpignX58bEn3+/5a/F3Hs6/t9r2jWSElGdUYIUyjx6OJF52AGHel9kiJn67I7L5NzDvjC3PL5dIZ2XS/4f5bx++uOaUN/f/d/BiKgTJxcQPTg6iYZIb3xguTL6SkKRhilhKX21KtH42pc=

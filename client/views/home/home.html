@@ -1,0 +1,28 @@
+<template name='home'>
+
+    <div class="container">
+        <h1>Bravo Time</h1>
+        <p class="lead">The Bravo Time web-app will save you all the time. ALL OF IT.</p>
+
+        <p>{{#unless currentUser}}<a class="btn btn-lg btn-success" href="{{pathFor route='login'}}" role="button">Get started today</a> {{/unless}}</p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Features</h2>
+                <p>Bravo Time allows you to seamlessly track time, while simultaneously doing other things.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>About </h2>
+                <p>This amazing webapp has been designed by the fantastic folks over at <a href="http://bravolt.com">Bravo LT</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Contact </h2>
+                <p>Contact is only a Pull request Away.</p>
+            </div>
+        </div>
+    </div>
+</template>
